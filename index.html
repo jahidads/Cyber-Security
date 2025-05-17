@@ -1,0 +1,672 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cyber Security</title>
+    <!-- Add Favicon -->
+    <link rel="icon" href="https://w7.pngwing.com/pngs/42/492/png-transparent-inspector-computer-security-malware-computer-icons-attack-security-hacker-cyber-miscellaneous-computer-network-hat-thumbnail.png" type="image/x-icon">
+    <style>
+        /* General Styles */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            background-color: #f4f4f9;
+        }
+
+        header {
+            background: #36615d;
+            color: #fff;
+            padding: 1rem 0;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap; /* Wrap menu items on smaller screens */
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: #fceb07;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.1rem;
+            transition: color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            color: #ffffff;
+        }
+
+        /* Hero Section */
+        .hero {
+            position: relative;
+            overflow: hidden;
+            height: 70vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #ffffff;
+            text-align: center;
+            background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7));
+        }
+
+        .background-video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1;
+        }
+
+        .hero-content h1 {
+            font-size: 3rem;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+        }
+
+        .hero-content p {
+            font-size: 1.2rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .hero-content button {
+            background: #fceb07;
+            color: #36615d;
+            border: none;
+            padding: 0.8rem 1.5rem;
+            font-size: 1rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            cursor: pointer;
+            transition: background 0.3s ease, color 0.3s ease;
+        }
+
+        .hero-content button:hover {
+            background: #36615d;
+            color: #fceb07;
+        }
+
+        /* About Section */
+        .about-section {
+            text-align: center;
+            padding: 4rem 2rem;
+            background: #212529;
+        }
+
+        .about-section .section-title {
+            font-size: 2.5rem;
+            color: #36615d;
+            margin-bottom: 1.5rem;
+            position: relative;
+            display: inline-block;
+        }
+
+        .about-section .section-title::after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 3px;
+            background: #fceb07;
+            bottom: -5px;
+            left: 0;
+        }
+
+        .about-section .lead {
+            font-size: 1.2rem;
+            color: #666;
+            margin-bottom: 2rem;
+        }
+
+        .about-section .card {
+            background: #8a9170;
+            border: 1px solid #e1e1e1;
+            border-radius: 8px;
+            padding: 2rem;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .about-section .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .about-section .icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .about-section .card-title {
+            font-size: 1.5rem;
+            color: #36615d;
+            margin-bottom: 1rem;
+        }
+
+        /* Tools Section */
+        .tools {
+            padding: 4rem 2rem;
+            background: #ffffff;
+        }
+
+        .tools h2 {
+            text-align: center;
+            margin-bottom: 2rem;
+            color: #36615d;
+        }
+
+        .tools .card {
+            border: 1px solid #e1e1e1;
+            border-radius: 8px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .tools .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Hover Effect for Tools Section */
+        .tool-card {
+          transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+        }
+
+        .tool-card:hover {
+          transform: translateY(-10px); /* Lift the card slightly */
+          box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); /* Add a deeper shadow */
+          background-color: #444; /* Change background color on hover */
+        }
+
+        /* Testimonials Section */
+        .testimonials {
+            padding: 4rem 2rem;
+            background: #ffffff;
+        }
+
+        .testimonials h2 {
+            text-align: center;
+            margin-bottom: 2rem;
+            color: #36615d;
+        }
+
+        #testimonials h2 {
+            color: white;
+        }
+
+        .testimonial {
+            background: #ffffff; /* Updated background color for testimonials */
+            border: 1px solid #301e1e;
+            border-radius: 8px;
+            padding: 2rem;
+            margin-bottom: 1.5rem;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            background: #ffffff; /* Updated background color for testimonials */
+            border: 1px solid #301e1e; /* Updated border color */
+        }
+
+        .testimonial:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Booking Section */
+        .booking {
+            padding: 4rem 2rem;
+            background: #212529;
+        }
+
+        .booking h2 {
+            text-align: center;
+            margin-bottom: 2rem;
+            color: #36615d;
+        }
+
+        .booking form {
+            max-width: 600px;
+            margin: 0 auto;
+            background: #f4f4f9;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .booking label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: bold;
+        }
+
+        .booking input {
+            width: 100%;
+            padding: 0.8rem;
+            margin-bottom: 1rem;
+            border: 1px solid #e1e1e1;
+            border-radius: 4px;
+        }
+
+        .booking button {
+            width: 100%;
+            padding: 0.8rem;
+            background: #36615d;
+            color: #ffffff;
+            border: none;
+            border-radius: 4px;
+            font-size: 1rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+
+        .booking button:hover {
+            background: #fceb07;
+            color: #36615d;
+        }
+
+        /* Modal Styles */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.7);
+        }
+
+        .modal-content {
+            background-color: #fefefe;
+            margin: 15% auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%;
+            max-width: 500px;
+            border-radius: 8px;
+        }
+
+        .close-btn {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .close-btn:hover,
+        .close-btn:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        /* Footer Styles */
+        footer {
+            background: #36615d;
+            color: #fff;
+            text-align: center;
+            padding: 1rem 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        footer p {
+            margin: 0;
+            font-size: 0.9rem;
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 992px) {
+    nav ul {
+        flex-direction: column; /* Stack menu items vertically */
+        align-items: center;
+    }
+
+    nav ul li {
+        margin: 10px 0; /* Add spacing between menu items */
+    }
+
+    .hero-content h1 {
+        font-size: 2rem; /* Reduce font size for smaller screens */
+    }
+
+    .hero-content p {
+        font-size: 1rem;
+    }
+
+    .hero-content button {
+        padding: 0.6rem 1.2rem;
+        font-size: 0.9rem;
+    }
+
+    .about-section .section-title {
+        font-size: 2rem;
+    }
+
+    .about-section .lead {
+        font-size: 1rem;
+    }
+
+    .about-section .card {
+        padding: 1.5rem;
+    }
+
+    footer {
+        font-size: 0.8rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .hero-content h1 {
+        font-size: 1.8rem; /* Further reduce font size for very small screens */
+    }
+
+    .hero-content p {
+        font-size: 0.9rem;
+    }
+
+    .hero-content button {
+        padding: 0.5rem 1rem;
+        font-size: 0.8rem;
+    }
+
+    .about-section .section-title {
+        font-size: 1.8rem;
+    }
+
+    .about-section .lead {
+        font-size: 0.9rem;
+    }
+
+    .about-section .card {
+        padding: 1rem;
+    }
+
+    footer {
+        font-size: 0.7rem;
+    }
+}
+    </style>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #36615d;">
+    <div class="container">
+        <a class="navbar-brand" href="#">
+            <img src="https://w7.pngwing.com/pngs/42/492/png-transparent-inspector-computer-security-malware-computer-icons-attack-security-hacker-cyber-miscellaneous-computer-network-hat-thumbnail.png" alt="CyberSecPro Logo" style="width: 30px; height: 30px; margin-right: 8px;">
+            CyberSecPro
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link" href="#hero">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="#about">About Us</a></li>
+                <li class="nav-item"><a class="nav-link" href="#tools">Tools</a></li>
+                <li class="nav-item"><a class="nav-link" href="#testimonials">Testimonials</a></li>
+                <li class="nav-item"><a class="nav-link" href="#booking">Booking</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+    </header>
+
+    <section class="hero" id="hero">
+        <video class="background-video" autoplay loop muted>
+            <source src="https://cdn.pixabay.com/video/2025/05/16/279513.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <div class="hero-content">
+            <h1>Unlock the Power of Cyber Security</h1>
+            <p>Master Ethical Hacking with our expert tools and services</p>
+            <a href="https://www.facebook.com/jahidads1" target="_blank">
+                <button>Visit My Facebook Account</button>
+            </a>
+        </div>
+    </section>
+
+    <section class="about-section text-center" id="about">
+        <h2 class="section-title">About Us</h2>
+        <p class="lead">We are a cybersecurity company dedicated to protecting your digital assets. With certified experts and years of experience, we secure networks, systems, and sensitive data with a proactive, ethical approach.</p>
+        
+        <div class="row mt-5">
+            <!-- Mission -->
+            <div class="col-md-4 mb-4">
+                <div class="card p-4 h-100">
+                    <div class="icon mb-3">🔐</div>
+                    <h5 class="card-title">Our Mission</h5>
+                    <p>To safeguard the digital future by delivering intelligent and ethical cybersecurity solutions tailored to your needs.</p>
+                </div>
+            </div>
+
+            <!-- What We Do -->
+            <div class="col-md-4 mb-4">
+                <div class="card p-4 h-100">
+                    <div class="icon mb-3">💻</div>
+                    <h5 class="card-title">What We Do</h5>
+                    <p>We offer network protection, penetration testing, incident response, compliance solutions, and awareness training.</p>
+                </div>
+            </div>
+
+            <!-- Why Choose Us -->
+            <div class="col-md-4 mb-4">
+                <div class="card p-4 h-100">
+                    <div class="icon mb-3">⚙️</div>
+                    <h5 class="card-title">Why Choose Us?</h5>
+                    <p>Certified experts, custom solutions, transparency, and a proactive approach to defending your digital environment.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-5 bg-dark text-light" id="tools">
+      <div class="container">
+        <h2 class="text-center mb-5 text-uppercase" style="letter-spacing: 2px; color: #fceb07;">Our Tools & Services</h2>
+        <div class="row g-4">
+          <div class="col-md-6 col-lg-4">
+            <div class="card h-100 bg-secondary text-light shadow-lg border-0 tool-card">
+              <div class="card-body text-center">
+                <!-- Logo -->
+                <img src="https://www.svgrepo.com/show/445156/hacker-solid.svg" alt="Penetration Testing Logo" class="mb-3" style="width: 80px; height: auto;">
+                <h5 class="card-title text-warning">Penetration Testing Tools</h5>
+                <p class="card-text">Identify and fix security flaws through realistic attack simulations using our advanced tools.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4">
+            <div class="card h-100 bg-secondary text-light shadow-lg border-0 tool-card">
+              <div class="card-body text-center">
+                <!-- Logo -->
+                <img src="https://www.svgrepo.com/show/318097/security-unsecured.svg" alt="Vulnerability Assessment Logo" class="mb-3" style="width: 80px; height: auto;">
+                <h5 class="card-title text-warning">Vulnerability Assessment</h5>
+                <p class="card-text">Scan, analyze, and report vulnerabilities across systems and applications to reduce exposure.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4">
+            <div class="card h-100 bg-secondary text-light shadow-lg border-0 tool-card">
+              <div class="card-body text-center">
+                <!-- Logo -->
+                <img src="https://cdn.pixabay.com/photo/2020/10/17/12/16/fingerprint-5661868_640.png" alt="Security Audits Logo" class="mb-3" style="width: 80px; height: auto;">
+                <h5 class="card-title text-warning">Security Audits</h5>
+                <p class="card-text">Comprehensive audits to ensure your cybersecurity posture meets industry standards.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4">
+            <div class="card h-100 bg-secondary text-light shadow-lg border-0 tool-card">
+              <div class="card-body text-center">
+                <!-- Logo -->
+                <img src="https://www.svgrepo.com/show/425528/computer-hacking-virus.svg" alt="Live Hacking Tutorials logo" class="mb-3" style="width: 80px; height: auto;">
+                <h5 class="card-title text-warning">Live Hacking Tutorials</h5>
+                <p class="card-text">Learn ethical hacking techniques through practical demonstrations led by experts.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4">
+            <div class="card h-100 bg-secondary text-light shadow-lg border-0 tool-card">
+              <div class="card-body text-center">
+                <!-- Logo -->
+                <img src="https://www.svgrepo.com/show/526380/translation-2.svg" alt="Consultation Services Logo" class="mb-3" style="width: 80px; height: auto;">
+                <h5 class="card-title text-warning">Consultation Services</h5>
+                <p class="card-text">Personalized guidance on improving your cybersecurity defenses and strategic planning.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4">
+            <div class="card h-100 bg-secondary text-light shadow-lg border-0 tool-card">
+              <div class="card-body text-center">
+                <!-- Logo -->
+                <img src="https://www.svgrepo.com/show/385158/headphones-head-set-chat-live-support.svg" alt="Live Support Logo" class="mb-3" style="width: 80px; height: auto;">
+                <h5 class="card-title text-warning">Live Support</h5>
+                <p class="card-text">In the digital world, threats don’t keep office hours—neither do we. Our 24/7 Live Support ensures that help is always just a click away.</p>
+              </div>
+            </div>
+          </div>          
+        </div>
+      </div>
+    </section>
+
+    <section class="py-5" id="testimonials" style="background-color: #212529;">
+      <div class="container">
+        <h2 class="text-center mb-5 fw-bold" style="color: white;">What Our Clients Say</h2>
+        <div class="row g-4">
+
+          <!-- Testimonial 1 -->
+          <div class="col-md-4">
+            <div class="card shadow border-0 h-100">
+              <div class="card-body text-center">
+                <!-- Profile Picture -->
+                <img src="https://scontent.fdac174-1.fna.fbcdn.net/v/t39.30808-6/491918938_122217474758168483_4678418564444703115_n.jpg?stp=dst-jpg_p526x296_tt6&_nc_cat=100&ccb=1-7&_nc_sid=a5f93a&_nc_ohc=vQnJHeGKxT4Q7kNvwEzI4ua&_nc_oc=AdlzS4emTfHphtBvurAzb42HnZVT5m2AIS7JB97NuI965WAOEKTqi4-E97rJiiAAlxU&_nc_pt=1&_nc_zt=23&_nc_ht=scontent.fdac174-1.fna&_nc_gid=3k4x9PW5XDPzLLQYQyH_6Q&oh=00_AfIB3KHHcWkLutI98QghghAj78MIBO8qfnpV8BVSdNElFg&oe=682E3B7F" alt="Ishraq Ahmad" class="rounded-circle mb-3" style="width: 80px; height: 80px;">
+                <!-- Star Rating -->
+                <div class="mb-3">
+                  <span style="color: #ffc107;">&#9733;&#9733;&#9733;&#9733;&#9734;</span>
+                </div>
+                <p class="fs-5 fst-italic">"The team was incredibly responsive and helped us stop a data breach before it spread. Their 24/7 support is exactly what we needed."</p>
+                <div class="mt-4">
+                  <h6 class="mb-0">Ishraq Ahmad</h6>
+                  <small class="text-muted">IT Manager, FinSecure Ltd.</small>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Testimonial 2 -->
+          <div class="col-md-4">
+            <div class="card shadow border-0 h-100">
+              <div class="card-body text-center">
+                <!-- Profile Picture -->
+                <img src="https://scontent.fdac174-1.fna.fbcdn.net/v/t39.30808-6/472265164_122216707160022439_1001905034899659524_n.jpg?stp=dst-jpg_p526x296_tt6&_nc_cat=110&ccb=1-7&_nc_sid=a5f93a&_nc_ohc=Yguru_KOIdsQ7kNvwFeGy1d&_nc_oc=Adm1tzXGbKl8GSSEeJo3rWMguIflofuLc2CCicHTOnVLPy0D_0SQc_A40DmDBFSUQ4M&_nc_pt=1&_nc_zt=23&_nc_ht=scontent.fdac174-1.fna&_nc_gid=JunbmnCQh6eJUe1fYrcrkw&oh=00_AfIb0IQIA6RjJBJMATr-3rur_NSvh2tpTz3C4_BKfFs6MA&oe=682E3B50" alt="Abdullah Al Kafi" class="rounded-circle mb-3" style="width: 80px; height: 80px;">
+                <!-- Star Rating -->
+                <div class="mb-3">
+                  <span style="color: #ffc107;">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+                </div>
+                <p class="fs-5 fst-italic">"We sleep better at night knowing our systems are protected by experts who truly understand cybersecurity. Highly recommended."</p>
+                <div class="mt-4">
+                  <h6 class="mb-0">Abdullah Al Kafi</h6>
+                  <small class="text-muted">CEO, Malik Innovations</small>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Testimonial 3 -->
+          <div class="col-md-4">
+            <div class="card shadow border-0 h-100">
+              <div class="card-body text-center">
+                <!-- Profile Picture -->
+                <img src="https://scontent.fdac174-1.fna.fbcdn.net/v/t39.30808-6/486288441_619825231031202_472849673548077449_n.jpg?stp=dst-jpg_p526x296_tt6&_nc_cat=102&ccb=1-7&_nc_sid=a5f93a&_nc_ohc=m_AEYNchVnAQ7kNvwFqFWVP&_nc_oc=AdlvnrrPDHvmt65U1_HfyZ8WtBXsv9Zengy2EQIWjTt26R7Z0J8psDw-QIOlv8GqrNc&_nc_pt=1&_nc_zt=23&_nc_ht=scontent.fdac174-1.fna&_nc_gid=V9Fo2ueNFgc_8hTnU9uHnw&oh=00_AfIkQWUSV9BDiYDHRXo_JUcKaAvvZlhCWsSOkMsZagIbRQ&oe=682E6115" alt="MD Tanim Rahman" class="rounded-circle mb-3" style="width: 80px; height: 80px;">
+                <!-- Star Rating -->
+                <div class="mb-3">
+                  <span style="color: #ffc107;">&#9733;&#9733;&#9733;&#9733;&#9732;</span>
+                </div>
+                <p class="fs-5 fst-italic">"Their proactive security assessments saved us from major vulnerabilities. Professional, prompt, and thorough service."</p>
+                <div class="mt-4">
+                  <h6 class="mb-0">MD Tanim Rahman</h6>
+                  <small class="text-muted">Operations Director, E-Tech Solutions</small>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <section class="booking" id="booking">
+        <h2>Booking</h2>
+        <form id="booking-form">
+            <label for="name">Full Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email Address:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="date">Preferred Date:</label>
+            <input type="date" id="date" name="date" required>
+
+            <button type="submit">Book Now</button>
+        </form>
+    </section>
+
+    <div id="login-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <h2>Login</h2>
+            <form id="login-form">
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" required>
+
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+
+                <button type="submit">Login</button>
+            </form>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 CyberSecPro | All Rights Reserved</p>
+    </footer>
+
+    <script>
+        const loginBtn = document.getElementById('login-btn');
+        const loginModal = document.getElementById('login-modal');
+        const closeBtn = document.querySelector('.close-btn');
+
+        loginBtn.addEventListener('click', () => {
+            loginModal.style.display = 'flex';
+        });
+
+        closeBtn.addEventListener('click', () => {
+            loginModal.style.display = 'none';
+        });
+
+        window.addEventListener('click', (e) => {
+            if (e.target === loginModal) {
+                loginModal.style.display = 'none';
+            }
+        });
+    </script>
+</body>
+</html>
