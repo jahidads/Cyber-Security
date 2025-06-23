@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cyber Security</title>
     <!-- Add Favicon -->
-    <link rel="icon" href="https://static.vecteezy.com/system/resources/thumbnails/036/895/728/small/hacker-logo-or-hacker-in-black-hoodie-cyber-crime-with-laptop-free-png.png" type="image/x-icon">
+    <link rel="icon" href="profile.logo.webp" type="image/x-icon">
     <style>
         /* General Styles */
         body {
@@ -106,12 +106,12 @@
         .about-section {
             text-align: center;
             padding: 4rem 2rem;
-            background: #212529;
+            background: #363d44;
         }
 
         .about-section .section-title {
             font-size: 2.5rem;
-            color: #36615d;
+            color: #07f8e0;
             margin-bottom: 1.5rem;
             position: relative;
             display: inline-block;
@@ -128,8 +128,8 @@
         }
 
         .about-section .lead {
-            font-size: 1.2rem;
-            color: #666;
+            font-size: 2rem;
+            color: #ffffff;
             margin-bottom: 2rem;
         }
 
@@ -153,7 +153,7 @@
 
         .about-section .card-title {
             font-size: 1.5rem;
-            color: #36615d;
+            color: #12dac6;
             margin-bottom: 1rem;
         }
 
@@ -232,7 +232,7 @@
         .booking h2 {
             text-align: center;
             margin-bottom: 2rem;
-            color: #36615d;
+            color: #04f8e0;
         }
 
         .booking form {
@@ -261,7 +261,7 @@
         .booking button {
             width: 100%;
             padding: 0.8rem;
-            background: #36615d;
+            background: #2f726b;
             color: #ffffff;
             border: none;
             border-radius: 4px;
@@ -272,8 +272,8 @@
         }
 
         .booking button:hover {
-            background: #fceb07;
-            color: #36615d;
+            background: #797433;
+            color: #03fae1;
         }
 
         /* Modal Styles */
@@ -412,8 +412,8 @@
         <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #36615d;">
     <div class="container">
         <a class="navbar-brand" href="#">
-            <img src="https://static.vecteezy.com/system/resources/thumbnails/036/895/728/small/hacker-logo-or-hacker-in-black-hoodie-cyber-crime-with-laptop-free-png.png" alt="CyberSecPro Logo" style="width: 30px; height: 30px; margin-right: 8px;">
-            CyberSecPro
+            <img src="profile.logo.webp" alt="CyberSecPro Logo" style="width: 30px; height: 30px; margin-right: 8px;">
+            <span class="color-animate">CyberSecPro</span>
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -433,15 +433,84 @@
 
     <section class="hero" id="hero">
         <video class="background-video" autoplay loop muted>
-            <source src="https://cdn.pixabay.com/video/2025/05/16/279513.mp4" type="video/mp4">
+            <source src="homepage.video.mp4" type="video/mp4">
             Your browser does not support the video tag.
         </video>
         <div class="hero-content">
-            <h1>Unlock the Power of Cyber Security</h1>
-            <p>Master Ethical Hacking with our expert tools and services</p>
+            <h1 class="cyber-animate color-animate">Unlock the Power  of Cyber Security</h1>
+            <script>
+                // Simple typing animation for the hero headline
+                document.addEventListener("DOMContentLoaded", function() {
+                    const el = document.querySelector('.cyber-animate');
+                    const text = el.textContent;
+                    el.textContent = '';
+                    let i = 0;
+                    function type() {
+                        if (i < text.length) {
+                            el.textContent += text.charAt(i);
+                            i++;
+                            setTimeout(type, 50);
+                        }
+                    }
+                    type();
+                });
+            </script>
+            <style>
+            .cyber-animate {
+                display: inline-block;
+                border-right: 2px solid #fceb07;
+                white-space: nowrap;
+                overflow: hidden;
+                animation: blink-cursor 0.8s steps(1) infinite;
+                font-size: 3rem;
+                max-width: 100vw;
+                box-sizing: border-box;
+                word-break: break-word;
+            }
+
+            /* Responsive headline for tablets and below */
+            @media (max-width: 992px) {
+                .cyber-animate {
+                    font-size: 2rem;
+                }
+            }
+
+            /* Responsive headline for mobile */
+            @media (max-width: 576px) {
+                .cyber-animate {
+                    font-size: 1.3rem;
+                    border-right-width: 1px;
+                }
+            }
+            </style>
+            <p class="color-animate">Master Ethical Hacking with our expert tools and services</p>
             <a href="https://www.facebook.com/jahidads1" target="_blank">
-                <button>Visit My Facebook Account</button>
+                <button class="color-animate-btn">Visit My Facebook Account</button>
             </a>
+            <style>
+            /* Color animation for the hero subheadline */
+            .color-animate {
+                animation: colorCycle 3s linear infinite;
+            }
+            @keyframes colorCycle {
+                0% { color: #fceb07; }
+                25% { color: #36615d; }
+                50% { color: #ff4e50; }
+                75% { color: #00b894; }
+                100% { color: #fceb07; }
+            }
+            /* Color animation for the button */
+            .color-animate-btn {
+                animation: btnColorCycle 3s linear infinite;
+            }
+            @keyframes btnColorCycle {
+                0% { background: #fceb07; color: #36615d; }
+                25% { background: #36615d; color: #fceb07; }
+                50% { background: #ff4e50; color: #fff; }
+                75% { background: #00b894; color: #fff; }
+                100% { background: #fceb07; color: #36615d; }
+            }
+            </style>
         </div>
     </section>
 
@@ -557,7 +626,7 @@
             <div class="card shadow border-0 h-100">
               <div class="card-body text-center">
                 <!-- Profile Picture -->
-                <img src="https://scontent.fdac174-1.fna.fbcdn.net/v/t39.30808-1/500606894_122223132644168483_6630575527950616513_n.jpg?stp=dst-jpg_s100x100_tt6&_nc_cat=106&ccb=1-7&_nc_sid=e99d92&_nc_ohc=-JcCzlEcXswQ7kNvwGhTfkQ&_nc_oc=Adk3fdNPwkwlrM6QRggx3snRgYBls3wst3yBZCI9Tb41_avio_VYxwnZC2Q_8m5keB8&_nc_zt=24&_nc_ht=scontent.fdac174-1.fna&_nc_gid=udQIosY0wuSw27FpjgvGNg&oh=00_AfJ_m70hOYrJldKtPoWLOs8l3eXsozED8BE_u1IexNEqUA&oe=683741BB" alt="Ishraq Ahmad" class="rounded-circle mb-3" style="width: 80px; height: 80px;">
+                <img src="ishraq-ahmad.jpg" alt="Ishraq Ahmad" class="rounded-circle mb-3" style="width: 80px; height: 80px;">
                 <!-- Star Rating -->
                 <div class="mb-3">
                   <span style="color: #ffc107;">&#9733;&#9733;&#9733;&#9733;&#9734;</span>
@@ -576,7 +645,7 @@
             <div class="card shadow border-0 h-100">
               <div class="card-body text-center">
                 <!-- Profile Picture -->
-                <img src="https://scontent.fdac174-1.fna.fbcdn.net/v/t39.30808-6/472265164_122216707160022439_1001905034899659524_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=a5f93a&_nc_ohc=WFr1DXKsLXMQ7kNvwE9tP7t&_nc_oc=AdmhlIMUC7gTFBn0fY6O7SMesqeyZ7nlUogDx4JH_DYmZdPgcmwFbzepM77CRPG5F0c&_nc_zt=23&_nc_ht=scontent.fdac174-1.fna&_nc_gid=rEwtMRHSWYjaP58poBGBQQ&oh=00_AfLRscL7b1II-iWf1fiDYzwd84V8SNG47bGXI_Voo4ohgA&oe=68373D90" alt="Abdullah Al Kafi" class="rounded-circle mb-3" style="width: 80px; height: 80px;">
+                <img src="abdullah-al-kafi.jpg" alt="Abdullah Al Kafi" class="rounded-circle mb-3" style="width: 80px; height: 80px;">
                 <!-- Star Rating -->
                 <div class="mb-3">
                   <span style="color: #ffc107;">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
@@ -595,7 +664,7 @@
             <div class="card shadow border-0 h-100">
               <div class="card-body text-center">
                 <!-- Profile Picture -->
-                <img src="https://scontent.fdac174-1.fna.fbcdn.net/v/t39.30808-6/486288441_619825231031202_472849673548077449_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=a5f93a&_nc_ohc=5DuIaGexhbEQ7kNvwGJ5LHk&_nc_oc=AdlaviiTKdXND6I6x48NdVTqCAi74e66Mi12Mh6aC2IkzarPEgO7W09hLDZbCN9XU4Q&_nc_zt=23&_nc_ht=scontent.fdac174-1.fna&_nc_gid=OOtBwnXfulkQvaRjh72r3w&oh=00_AfIUP27UPo3_38z-TGIUyrEN_zu8gijPyjJH5ZhTjX5xcg&oe=68372B15" alt="MD Tanim Rahman" class="rounded-circle mb-3" style="width: 80px; height: 80px;">
+                <img src="tanim.jpg" alt="MD Tanim Rahman" class="rounded-circle mb-3" style="width: 80px; height: 80px;">
                 <!-- Star Rating -->
                 <div class="mb-3">
                   <span style="color: #ffc107;">&#9733;&#9733;&#9733;&#9733;&#9732;</span>
