@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -538,44 +537,124 @@
         <div class="row mt-5">
             <!-- Mission -->
             <div class="col-md-4 mb-4">
-                <div class="card p-4 h-100">
-                    <div class="icon mb-3">🔐</div>
+                <div class="card p-4 h-100 position-relative overflow-hidden">
+                    <!-- Side Animation Bar -->
+                    <div class="side-animate-bar"></div>
+                    <div class="icon mb-3 animate-icon">🔐</div>
                     <h5 class="card-title">Our Mission</h5>
                     <p>To safeguard the digital future by delivering intelligent and ethical cybersecurity solutions tailored to your needs.</p>
                 </div>
             </div>
+            <style>
+            /* Side Animation Bar for About Card */
+            .side-animate-bar {
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: 8px;
+                height: 100%;
+                background: linear-gradient(180deg, #07f8e0, #fceb07, #ff4e50, #00b894, #07f8e0);
+                animation: sideBarMove 2.5s linear infinite;
+                border-radius: 8px 0 0 8px;
+                z-index: 1;
+            }
+            @keyframes sideBarMove {
+                0% { background-position: 0% 0%; }
+                100% { background-position: 0% 100%; }
+            }
+            .card.p-4.h-100.position-relative .icon,
+            .card.p-4.h-100.position-relative .card-title,
+            .card.p-4.h-100.position-relative p {
+                position: relative;
+                z-index: 2;
+            }
+            </style>
 
             <!-- What We Do -->
             <div class="col-md-4 mb-4">
-                <div class="card p-4 h-100">
-                    <div class="icon mb-3">💻</div>
+                <div class="card p-4 h-100 position-relative overflow-hidden">
+                    <!-- Side Animation Bar -->
+                    <div class="side-animate-bar"></div>
+                    <div class="icon mb-3 animate-icon">💻</div>
                     <h5 class="card-title">What We Do</h5>
                     <p>We offer network protection, penetration testing, incident response, compliance solutions, and awareness training.</p>
                 </div>
+                <style>
+                /* Animated Icon for What We Do */
+                .animate-icon {
+                    display: inline-block;
+                    animation: bounce 1.5s infinite;
+                }
+                @keyframes bounce {
+                    0%, 100% { transform: translateY(0);}
+                    50% { transform: translateY(-12px);}
+                }
+                </style>
             </div>
 
             <!-- Why Choose Us -->
             <div class="col-md-4 mb-4">
-                <div class="card p-4 h-100">
-                    <div class="icon mb-3">⚙️</div>
+                <div class="card p-4 h-100 position-relative overflow-hidden">
+                    <!-- Side Animation Bar -->
+                    <div class="side-animate-bar"></div>
+                    <div class="icon mb-3 spin-icon">⚙️</div>
                     <h5 class="card-title">Why Choose Us?</h5>
                     <p>Certified experts, custom solutions, transparency, and a proactive approach to defending your digital environment.</p>
                 </div>
+                <style>
+                /* Animated spinning icon for Why Choose Us */
+                .spin-icon {
+                    display: inline-block;
+                    animation: spin 2s linear infinite;
+                }
+                @keyframes spin {
+                    0% { transform: rotate(0deg);}
+                    100% { transform: rotate(360deg);}
+                }
+                </style>
             </div>
         </div>
     </section>
 
-    <section class="py-5 bg-dark text-light" id="tools">
+    <section class="py-5 bg-dark text-light border-animate-modern" id="tools">
+    <style>
+    /* Modern animated border for the tools section */
+    .border-animate-modern {
+        position: relative;
+        z-index: 1;
+        overflow: hidden;
+        border-radius: 18px;
+        padding: 2px;
+    }
+    .border-animate-modern::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        z-index: -1;
+        border-radius: 18px;
+        padding: 0;
+        background: linear-gradient(270deg, #19c5b4, #b1a60e, #97181a, #165c4e, #169184);
+        background-size: 400% 400%;
+        animation: borderGradientMove 8s ease-in-out infinite;
+    }
+    @keyframes borderGradientMove {
+        0% { background-position: 0% 50%; }
+        50% { background-position: 100% 50%; }
+        100% { background-position: 0% 50%; }
+    }
+    </style>
       <div class="container">
         <h2 class="text-center mb-5 text-uppercase" style="letter-spacing: 2px; color: #fceb07;">Our Tools & Services</h2>
         <div class="row g-4">
           <div class="col-md-6 col-lg-4">
             <div class="card h-100 bg-secondary text-light shadow-lg border-0 tool-card">
-              <div class="card-body text-center">
+            <div class="card-body text-center">
                 <!-- Logo -->
                 <img src="https://www.svgrepo.com/show/445156/hacker-solid.svg" alt="Penetration Testing Logo" class="mb-3" style="width: 80px; height: auto;">
                 <h5 class="card-title text-warning">Penetration Testing Tools</h5>
-                <p class="card-text">Identify and fix security flaws through realistic attack simulations using our advanced tools.</p>
+                <p class="card-text">
+                    <span style="color:#fceb07; font-weight:bold;">Identify and fix security flaws</span> through realistic attack simulations using our <span style="color:#fceb07; font-weight:bold;">advanced tools</span>.
+                </p>
               </div>
             </div>
           </div>
@@ -585,7 +664,9 @@
                 <!-- Logo -->
                 <img src="https://www.svgrepo.com/show/318097/security-unsecured.svg" alt="Vulnerability Assessment Logo" class="mb-3" style="width: 80px; height: auto;">
                 <h5 class="card-title text-warning">Vulnerability Assessment</h5>
-                <p class="card-text">Scan, analyze, and report vulnerabilities across systems and applications to reduce exposure.</p>
+                <p class="card-text">
+                    <span style="color:#fceb07; font-weight:bold;">Scan, analyze, and report vulnerabilities</span> across systems and applications to <span style="color:#fceb07; font-weight:bold;">reduce exposure</span>.
+                </p>
               </div>
             </div>
           </div>
@@ -595,7 +676,9 @@
                 <!-- Logo -->
                 <img src="https://cdn.pixabay.com/photo/2020/10/17/12/16/fingerprint-5661868_640.png" alt="Security Audits Logo" class="mb-3" style="width: 80px; height: auto;">
                 <h5 class="card-title text-warning">Security Audits</h5>
-                <p class="card-text">Comprehensive audits to ensure your cybersecurity posture meets industry standards.</p>
+                <p class="card-text">
+                    <span style="color:#fceb07; font-weight:bold;">Comprehensive audits</span> to ensure your cybersecurity posture meets <span style="color:#fceb07; font-weight:bold;">industry standards</span>.
+                </p>
               </div>
             </div>
           </div>
@@ -605,7 +688,9 @@
                 <!-- Logo -->
                 <img src="https://www.svgrepo.com/show/425528/computer-hacking-virus.svg" alt="Live Hacking Tutorials logo" class="mb-3" style="width: 80px; height: auto;">
                 <h5 class="card-title text-warning">Live Hacking Tutorials</h5>
-                <p class="card-text">Learn ethical hacking techniques through practical demonstrations led by experts.</p>
+                <p class="card-text">
+                    Learn <span style="color:#fceb07; font-weight:bold;">ethical hacking techniques</span> through practical demonstrations led by <span style="color:#fceb07; font-weight:bold;">experts</span>.
+                </p>
               </div>
             </div>
           </div>
@@ -615,7 +700,9 @@
                 <!-- Logo -->
                 <img src="https://www.svgrepo.com/show/526380/translation-2.svg" alt="Consultation Services Logo" class="mb-3" style="width: 80px; height: auto;">
                 <h5 class="card-title text-warning">Consultation Services</h5>
-                <p class="card-text">Personalized guidance on improving your cybersecurity defenses and strategic planning.</p>
+                <p class="card-text">
+                    Personalized guidance on <span style="color:#fceb07; font-weight:bold;">improving your cybersecurity defenses</span> and <span style="color:#fceb07; font-weight:bold;">strategic planning</span>.
+                </p></p>
               </div>
             </div>
           </div>
@@ -625,7 +712,10 @@
                 <!-- Logo -->
                 <img src="https://www.svgrepo.com/show/385158/headphones-head-set-chat-live-support.svg" alt="Live Support Logo" class="mb-3" style="width: 80px; height: auto;">
                 <h5 class="card-title text-warning">Live Support</h5>
-                <p class="card-text">In the digital world, threats don’t keep office hours—neither do we. Our 24/7 Live Support ensures that help is always just a click away.</p>
+                <p class="card-text">
+                    In the digital world, threats don’t keep office hours—neither do we.
+                    Our <span style="color:#fceb07; font-weight:bold;">24/7 Live Support</span> ensures that help is always just a click away.
+                </p>
               </div>
             </div>
           </div>          
@@ -648,9 +738,12 @@
                 <div class="mb-3">
                   <span style="color: #ffc107;">&#9733;&#9733;&#9733;&#9733;&#9734;</span>
                 </div>
-                <p class="fs-5 fst-italic">"The team was incredibly responsive and helped us stop a data breach before it spread. Their 24/7 support is exactly what we needed."</p>
+                <p class="fs-5 fst-italic">
+                    "The team was incredibly responsive and helped us stop a data breach before it spread. 
+                    Their <span style="color:#9b921c; font-weight:bold;">24/7 support</span> is exactly what we needed."
+                </p>
                 <div class="mt-4">
-                  <h6 class="mb-0">Ishraq Ahmad</h6>
+                <h6 class="mb-0 color-animate">Ishraq Ahmad</h6>
                   <small class="text-muted">IT Manager, FinSecure Ltd.</small>
                 </div>
               </div>
@@ -667,9 +760,12 @@
                 <div class="mb-3">
                   <span style="color: #ffc107;">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
                 </div>
-                <p class="fs-5 fst-italic">"We sleep better at night knowing our systems are protected by experts who truly understand cybersecurity. Highly recommended."</p>
+                <p class="fs-5 fst-italic">
+                    "We sleep better at night knowing our systems are protected by experts who truly understand cybersecurity. 
+                    <span style="color:#9b921c; font-weight:bold;">Highly recommended.</span>"
+                </p>
                 <div class="mt-4">
-                  <h6 class="mb-0">Abdullah Al Kafi</h6>
+                  <h6 class="mb-0 color-animate">Abdullah Al Kafi</h6>
                   <small class="text-muted">CEO, Malik Innovations</small>
                 </div>
               </div>
@@ -686,9 +782,12 @@
                 <div class="mb-3">
                   <span style="color: #ffc107;">&#9733;&#9733;&#9733;&#9733;&#9732;</span>
                 </div>
-                <p class="fs-5 fst-italic">"Their proactive security assessments saved us from major vulnerabilities. Professional, prompt, and thorough service."</p>
+                <p class="fs-5 fst-italic">
+                    "Their <span style="color:#9b921c; font-weight:bold;">proactive security assessments</span> saved us from major vulnerabilities. 
+                    <span style="color:#2e8179; font-weight:bold;">Professional, prompt, and thorough service.</span>"
+                </p>
                 <div class="mt-4">
-                  <h6 class="mb-0">MD Tanim Rahman</h6>
+                  <h6 class="mb-0 color-animate">MD Tanim Rahman</h6>
                   <small class="text-muted">Operations Director, E-Tech Solutions</small>
                 </div>
               </div>
