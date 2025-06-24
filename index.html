@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -437,7 +438,7 @@
             Your browser does not support the video tag.
         </video>
         <div class="hero-content">
-            <h1 class="cyber-animate color-animate">Unlock the Power  of Cyber Security</h1>
+            <h2 class="cyber-animate color-animate">Unlock the Power  of Cyber Security</h2>
             <script>
                 // Simple typing animation for the hero headline
                 document.addEventListener("DOMContentLoaded", function() {
@@ -483,7 +484,23 @@
                 }
             }
             </style>
-            <p class="color-animate">Master Ethical Hacking with our expert tools and services</p>
+            <p class="color-animate" id="subheadline"></p>
+            <script>
+                // Typing animation for the subheadline
+                document.addEventListener("DOMContentLoaded", function() {
+                    const subEl = document.getElementById('subheadline');
+                    const subText = "Master Ethical Hacking with our expert tools and services";
+                    let j = 0;
+                    function typeSub() {
+                        if (j < subText.length) {
+                            subEl.textContent += subText.charAt(j);
+                            j++;
+                            setTimeout(typeSub, 35);
+                        }
+                    }
+                    typeSub();
+                });
+            </script>
             <a href="https://www.facebook.com/jahidads1" target="_blank">
                 <button class="color-animate-btn">Visit My Facebook Account</button>
             </a>
