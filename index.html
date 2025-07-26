@@ -399,6 +399,22 @@
         font-size: 0.7rem;
     }
 }
+
+#service {
+    width: 100%;
+    padding: 0.8rem;
+    font-size: 1rem;
+    border-radius: 4px;
+}
+
+#message {
+    width: 100%;
+    min-height: 100px;
+    padding: 0.8rem;
+    font-size: 1rem;
+    border-radius: 4px;
+    resize: vertical;
+}
     </style>
 
     <!-- Bootstrap CSS -->
@@ -420,11 +436,48 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ms-auto">
-                <li class="nav-item"><a class="nav-link" href="#hero">Home</a></li>
-                <li class="nav-item"><a class="nav-link" href="#about">About Us</a></li>
-                <li class="nav-item"><a class="nav-link" href="#tools">Tools</a></li>
-                <li class="nav-item"><a class="nav-link" href="#testimonials">Testimonials</a></li>
-                <li class="nav-item"><a class="nav-link" href="#booking">Booking</a></li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#hero">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="#fceb07" viewBox="0 0 24 24" style="vertical-align:middle; margin-right:4px;">
+                            <path d="M8 3.293l6 6V15a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V9.293l6-6zm5 6.707V15H3V10l5-5 5 5z"/>
+                            <path d="M7.293 2.293a1 1 0 0 1 1.414 0l7 7a1 1 0 0 1-1.414 1.414L8 4.414 1.707 11.707a1 1 0 0 1-1.414-1.414l7-7z"/>
+                        </svg>
+                        Home
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#about">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="#fceb07" viewBox="0 0 16 16" style="vertical-align:middle; margin-right:4px;">
+                            <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm4-3a4 4 0 1 1-8 0 4 4 0 0 1 8 0z"/>
+                            <path d="M14 14s-1-1.5-6-1.5S2 14 2 14V13a6 6 0 0 1 12 0v1z"/>
+                        </svg>
+                        About Us
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#tools">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="#fceb07" viewBox="0 0 24 24" style="vertical-align:middle; margin-right:4px;">
+                            <path d="M11.42 15.17 17.25 21A2.652 2.652 0 0 0 21 17.25l-5.877-5.877M11.42 15.17l2.496-3.03c.317-.384.74-.626 1.208-.766M11.42 15.17l-4.655 5.653a2.548 2.548 0 1 1-3.586-3.586l6.837-5.63m5.108-.233c.55-.164 1.163-.188 1.743-.14a4.5 4.5 0 0 0 4.486-6.336l-3.276 3.277a3.004 3.004 0 0 1-2.25-2.25l3.276-3.276a4.5 4.5 0 0 0-6.336 4.486c.091 1.076-.071 2.264-.904 2.95l-.102.085m-1.745 1.437L5.909 7.5H4.5L2.25 3.75l1.5-1.5L7.5 4.5v1.409l4.26 4.26m-1.745 1.437 1.745-1.437m6.615 8.206L15.75 15.75M4.867 19.125h.008v.008h-.008v-.008Z"/>
+                        </svg>
+                        Tools
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#testimonials">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="#fceb07" viewBox="0 0 24 24" style="vertical-align:middle; margin-right:4px;">
+                            <path d="M11.48 3.499a.562.562 0 0 1 1.04 0l2.125 5.111a.563.563 0 0 0 .475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 0 0-.182.557l1.285 5.385a.562.562 0 0 1-.84.61l-4.725-2.885a.562.562 0 0 0-.586 0L6.982 20.54a.562.562 0 0 1-.84-.61l1.285-5.386a.562.562 0 0 0-.182-.557l-4.204-3.602a.562.562 0 0 1 .321-.988l5.518-.442a.563.563 0 0 0 .475-.345L11.48 3.5Z"/>
+                        </svg>
+                        Testimonials
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#booking">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="#fceb07" viewBox="0 0 24 24" style="vertical-align:middle; margin-right:4px;">
+                            <path d="M7.5 8.25h9m-9 3H12m-9.75 1.51c0 1.6 1.123 2.994 2.707 3.227 1.129.166 2.27.293 3.423.379.35.026.67.21.865.501L12 21l2.755-4.133a1.14 1.14 0 0 1 .865-.501 48.172 48.172 0 0 0 3.423-.379c1.584-.233 2.707-1.626 2.707-3.228V6.741c0-1.602-1.123-2.995-2.707-3.228A48.394 48.394 0 0 0 12 3c-2.392 0-4.744.175-7.043.513C3.373 3.746 2.25 5.14 2.25 6.741v6.018Z"/>
+                        </svg>
+                        Booking
+                    </a>
+                </li></svg>
             </ul>
         </div>
     </div>
@@ -437,7 +490,7 @@
             Your browser does not support the video tag.
         </video>
         <div class="hero-content">
-            <h2 class="cyber-animate color-animate">Unlock the Power  of Cyber Security</h2>
+            <h2 class="cyber-animate">Unlock the Power  of Cyber Security</h2>
             <script>
                 // Simple typing animation for the hero headline
                 document.addEventListener("DOMContentLoaded", function() {
@@ -489,6 +542,8 @@
                 document.addEventListener("DOMContentLoaded", function() {
                     const subEl = document.getElementById('subheadline');
                     const subText = "Master Ethical Hacking with our expert tools and services";
+                    // Remove color animation class if present
+                    subEl.classList.remove('color-animate');
                     let j = 0;
                     function typeSub() {
                         if (j < subText.length) {
@@ -533,6 +588,202 @@
     <section class="about-section text-center" id="about">
         <h2 class="section-title">About Us</h2>
         <p class="lead">We are a cybersecurity company dedicated to protecting your digital assets. With certified experts and years of experience, we secure networks, systems, and sensitive data with a proactive, ethical approach.</p>
+        <!-- More Information Section -->
+        <div class="container mb-5">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="card p-4 mb-4 values-card shadow-lg position-relative overflow-hidden" style="background: linear-gradient(135deg, #202429 70%, #2d6d66 100%); color: #fff; border-radius: 18px; border: none;">
+                        <!-- Decorative Top Ribbon -->
+                        <div class="values-ribbon">
+                            <span>Our Core Values</span>
+                        </div>
+                        <h4 class="mb-3" style="color: #00ffe5; letter-spacing: 1px;">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="#fceb07" viewBox="0 0 24 24" style="vertical-align:middle; margin-right:8px;">
+                                <path d="M12 2l2.09 6.26L20 9.27l-5 3.64L16.18 20 12 16.77 7.82 20 9 12.91l-5-3.64 5.91-.01z"/>
+                            </svg>
+                            Our Values
+                        </h4>
+                        <ul class="values-list mb-0">
+                            <li>
+                                <span class="values-icon integrity">🛡️</span>
+                                <strong>Integrity:</strong> We operate with honesty and transparency in every engagement.
+                            </li>
+                            <li>
+                                <span class="values-icon confidentiality">🔒</span>
+                                <strong>Confidentiality:</strong> Your data and privacy are our highest priority.
+                            </li>
+                            <li>
+                                <span class="values-icon learning">📚</span>
+                                <strong>Continuous Learning:</strong> Our team stays ahead of threats through ongoing training and research.
+                            </li>
+                            <li>
+                                <span class="values-icon client">🤝</span>
+                                <strong>Client-Centric:</strong> Solutions are tailored to your unique business needs and risks.
+                            </li>
+                        </ul>
+                        <style>
+                            .values-card {
+                                box-shadow: 0 6px 24px rgba(7, 248, 224, 0.08), 0 1.5px 6px rgba(252, 235, 7, 0.09);
+                                border-radius: 18px;
+                                position: relative;
+                            }
+                            .values-ribbon {
+                                position: absolute;
+                                top: -14px;
+                                left: -40px;
+                                background: linear-gradient(90deg, #07f8e0 60%, #fceb07 100%);
+                                color: #212529;
+                                font-weight: bold;
+                                padding: 0.4rem 2.2rem;
+                                transform: rotate(-12deg);
+                                border-radius: 8px;
+                                box-shadow: 0 2px 8px rgba(0,0,0,0.09);
+                                font-size: 1rem;
+                                z-index: 2;
+                                letter-spacing: 1px;
+                            }
+                            .values-list {
+                                list-style: none;
+                                padding-left: 0;
+                                font-size: 1.08rem;
+                            }
+                            .values-list li {
+                                margin-bottom: 1rem;
+                                display: flex;
+                                align-items: center;
+                                background: rgba(62, 167, 156, 0.18);
+                                border-radius: 12px;
+                                padding: 0.7rem 1rem;
+                                box-shadow: 0 2px 8px rgba(7, 248, 224, 0.04);
+                                transition: background 0.3s;
+                            }
+                            .values-list li:hover {
+                                background: linear-gradient(90deg, #255752 10%, #2e4358 90%);
+                            }
+                            .values-icon {
+                                font-size: 1.7rem;
+                                margin-right: 12px;
+                                filter: drop-shadow(0 2px 4px #07f8e0);
+                                transition: transform 0.3s;
+                            }
+                            .values-list li:hover .values-icon {
+                                transform: scale(1.2) rotate(-8deg);
+                            }
+                            @media (max-width: 576px) {
+                                .values-card {
+                                    padding: 1rem;
+                                }
+                                .values-ribbon {
+                                    font-size: 0.8rem;
+                                    padding: 0.3rem 1.2rem;
+                                    top: -8px;
+                                    left: -20px;
+                                }
+                                .values-list li {
+                                    font-size: 0.95rem;
+                                    padding: 0.5rem 0.7rem;
+                                }
+                                .values-icon {
+                                    font-size: 1.2rem;
+                                    margin-right: 8px;
+                                }
+                            }
+                        </style>
+                    </div>
+                    <div class="card p-4 expertise-card shadow-lg" style="background: linear-gradient(135deg, #363d44 60%, #212529 100%); color: #fff; border: none; border-radius: 16px; position: relative; overflow: hidden;">
+                        <!-- Decorative Ribbon -->
+                        <div class="expertise-ribbon">
+                            <span>Expert Team</span>
+                        </div>
+                        <h4 class="mb-3" style="color: #fceb07; letter-spacing: 1px;">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="#07f8e0" viewBox="0 0 24 24" style="vertical-align:middle; margin-right:8px;">
+                                <path d="M12 2a7 7 0 0 1 7 7c0 3.87-3.13 7-7 7s-7-3.13-7-7a7 7 0 0 1 7-7zm0 2a5 5 0 0 0-5 5c0 2.76 2.24 5 5 5s5-2.24 5-5a5 5 0 0 0-5-5zm0 14c4.42 0 8 1.79 8 4v2H4v-2c0-2.21 3.58-4 8-4z"/>
+                            </svg>
+                            Certifications & Expertise
+                        </h4>
+                        <ul class="expertise-list mb-3">
+                            <li>
+                                <span class="badge bg-info text-dark me-2">CEH</span>
+                                Certified Ethical Hacker
+                            </li>
+                            <li>
+                                <span class="badge bg-warning text-dark me-2">CISSP</span>
+                                Certified Information Systems Security Professional
+                            </li>
+                            <li>
+                                <span class="badge bg-success text-dark me-2">OSCP</span>
+                                Offensive Security Certified Professional
+                            </li>
+                        </ul>
+                        <div class="d-flex flex-wrap gap-3 mb-2">
+                            <span class="expertise-chip">Finance</span>
+                            <span class="expertise-chip">Healthcare</span>
+                            <span class="expertise-chip">Tech Startups</span>
+                            <span class="expertise-chip">Government</span>
+                        </div>
+                        <p class="mb-0" style="font-size:1.08rem;">
+                            Our certified experts have delivered successful cybersecurity projects for <span style="color:#fceb07;">financial institutions</span>, <span style="color:#07f8e0;">tech startups</span>, <span style="color:#ff4e50;">healthcare</span>, and <span style="color:#00b894;">government agencies</span>.
+                        </p>
+                        <style>
+                            .expertise-card {
+                                box-shadow: 0 6px 24px rgba(7, 248, 224, 0.08), 0 1.5px 6px rgba(252, 235, 7, 0.09);
+                                border-radius: 16px;
+                            }
+                            .expertise-list {
+                                list-style: none;
+                                padding-left: 0;
+                                margin-bottom: 1rem;
+                            }
+                            .expertise-list li {
+                                margin-bottom: 0.5rem;
+                                font-size: 1.08rem;
+                                display: flex;
+                                align-items: center;
+                            }
+                            .expertise-chip {
+                                background: linear-gradient(90deg, #07f8e0 0%, #fceb07 100%);
+                                color: #212529;
+                                font-weight: 600;
+                                padding: 0.35rem 1rem;
+                                border-radius: 20px;
+                                font-size: 0.95rem;
+                                box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+                                letter-spacing: 0.5px;
+                            }
+                            .expertise-ribbon {
+                                position: absolute;
+                                top: -12px;
+                                right: -40px;
+                                background: linear-gradient(90deg, #07f8e0 60%, #fceb07 100%);
+                                color: #212529;
+                                font-weight: bold;
+                                padding: 0.4rem 2.2rem;
+                                transform: rotate(20deg);
+                                border-radius: 8px;
+                                box-shadow: 0 2px 8px rgba(0,0,0,0.09);
+                                font-size: 1rem;
+                                z-index: 2;
+                            }
+                            @media (max-width: 576px) {
+                                .expertise-card {
+                                    padding: 1rem;
+                                }
+                                .expertise-ribbon {
+                                    font-size: 0.8rem;
+                                    padding: 0.3rem 1.2rem;
+                                    top: -8px;
+                                    right: -20px;
+                                }
+                                .expertise-chip {
+                                    font-size: 0.85rem;
+                                    padding: 0.25rem 0.7rem;
+                                }
+                            }
+                        </style>
+                    </div>
+                </div>
+            </div>
+        </div>
         
         <div class="row mt-5">
             <!-- Mission -->
@@ -614,6 +865,32 @@
                 </style>
             </div>
         </div>
+    <div class="container mb-4">
+        <div id="aboutSlideshow" class="carousel slide" data-bs-ride="carousel" data-bs-interval="2500">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="13.jpg" alt="Support" class="img-fluid rounded shadow" style="max-height:180px; object-fit:cover; width:100%;">
+                </div>
+                <div class="carousel-item">
+                    <img src="cyber-security.avif" alt="Cyber-Security" class="img-fluid rounded shadow" style="max-height:180px; object-fit:cover; width:100%;">
+                </div>
+                <div class="carousel-item">
+                    <img src="istockphoto-1979408132-170667a.jpg" alt="Alert" class="img-fluid rounded shadow" style="max-height:180px; object-fit:cover; width:100%;">
+                </div>
+                <div class="carousel-item">
+                    <img src="wallpapersden.com_cybersecurity-core_1927x1080.jpg" alt="Security" class="img-fluid rounded shadow" style="max-height:180px; object-fit:cover; width:100%;">
+                </div>
+                <div class="carousel-item">
+                    <img src="wp4700038.jpg" alt="Protection" class="img-fluid rounded shadow" style="max-height:180px; object-fit:cover; width:100%;">
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#aboutSlideshow" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#aboutSlideshow" data-bs-slide="next">
+                <span class="carousel-control-next-icon"></span>
+            </button>
+        </div>
+    </div>
     </section>
 
     <section class="py-5 bg-dark text-light border-animate-modern" id="tools">
@@ -800,6 +1077,9 @@
 
     <section class="booking" id="booking">
         <h2>Booking</h2>
+        <p style="text-align:center; color:#ffffff; font-size:1.2rem; margin-bottom:2rem;">
+            Book a session with our cybersecurity experts for personalized advice, vulnerability assessments, or live hacking tutorials. Fill out the form below and we’ll contact you to confirm your appointment.
+        </p>
         <form id="booking-form">
             <label for="name">Full Name:</label>
             <input type="text" id="name" name="name" required>
@@ -810,48 +1090,99 @@
             <label for="date">Preferred Date:</label>
             <input type="date" id="date" name="date" required>
 
+            <label for="service">Select Service:</label>
+            <select id="service" name="service" required>
+                <option value="">-- Please choose --</option>
+                <option value="consultation">Consultation</option>
+                <option value="penetration-testing">Penetration Testing</option>
+                <option value="vulnerability-assessment">Vulnerability Assessment</option>
+                <option value="live-tutorial">Live Hacking Tutorial</option>
+                <option value="security-audit">Security Audit</option>
+            </select>
+
+            <label for="message">Additional Information:</label>
+            <textarea id="message" name="message" rows="3" placeholder="Describe your needs or questions..."></textarea>
+
             <button type="submit">Book Now</button>
         </form>
+        <div id="booking-success" style="display:none; text-align:center; color:#04f804; margin-top:2rem;">
+            Thank you for booking! We will contact you soon.
+        </div>
+        <script>
+            document.getElementById('booking-form').addEventListener('submit', function(e) {
+                e.preventDefault();
+                document.getElementById('booking-form').style.display = 'none';
+                document.getElementById('booking-success').style.display = 'block';
+            });
+        </script>
     </section>
 
-    <div id="login-modal" class="modal">
-        <div class="modal-content">
-            <span class="close-btn">&times;</span>
-            <h2>Login</h2>
-            <form id="login-form">
-                <label for="username">Username:</label>
-                <input type="text" id="username" name="username" required>
-
-                <label for="password">Password:</label>
-                <input type="password" id="password" name="password" required>
-
-                <button type="submit">Login</button>
-            </form>
+    <!-- Footer -->
+    <footer class="modern-footer">
+      <div class="footer-container">
+        <p class="footer-title">2025 CyberSecPro | <span class="dev-name">Developer: jahidads</span></p>
+        <div class="footer-links">
+          <a href="https://wa.me/8801308839759" target="_blank" class="footer-link">
+            💬 Live Support: Chat on WhatsApp
+          </a>
         </div>
-    </div>
-
-    <footer>
-        <p>&copy; 2025 CyberSecPro | Devloper name jahidads</p>
+      </div>
     </footer>
-
-    <script>
-        const loginBtn = document.getElementById('login-btn');
-        const loginModal = document.getElementById('login-modal');
-        const closeBtn = document.querySelector('.close-btn');
-
-        loginBtn.addEventListener('click', () => {
-            loginModal.style.display = 'flex';
-        });
-
-        closeBtn.addEventListener('click', () => {
-            loginModal.style.display = 'none';
-        });
-
-        window.addEventListener('click', (e) => {
-            if (e.target === loginModal) {
-                loginModal.style.display = 'none';
-            }
-        });
-    </script>
+    <style>
+      .modern-footer {
+        background: linear-gradient(90deg, #153b38 0%, #103b37 100%);
+        color: #fff;
+        padding: 2rem 0 1rem 0;
+        box-shadow: 0 -2px 10px rgba(5, 5, 5, 0.712);
+        position: relative;
+        border-top: 4px solid #e9e7c9;
+      }
+      .footer-container {
+        max-width: 900px;
+        margin: 0 auto;
+        text-align: center;
+      }
+      .footer-title {
+        font-size: 1.1rem;
+        margin-bottom: 0.5rem;
+        letter-spacing: 1px;
+      }
+      .dev-name {
+        color: #fceb07;
+        font-weight: bold;
+        animation: colorCycle 3s linear infinite;
+      }
+      .footer-links {
+        margin-top: 10px;
+      }
+      .footer-link {
+        color: #fceb07;
+        text-decoration: none;
+        font-weight: bold;
+        padding: 0.5rem 1.2rem;
+        border-radius: 20px;
+        background: rgba(54, 97, 93, 0.651);
+        transition: background 0.3s, color 0.3s;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+        display: inline-block;
+      }
+      .footer-link:hover {
+        background: #fceb07;
+        color: #2c4e4b;
+        text-decoration: underline;
+      }
+      @media (max-width: 576px) {
+        .modern-footer {
+          padding: 1rem 0;
+        }
+        .footer-title {
+          font-size: 0.9rem;
+        }
+        .footer-link {
+          font-size: 0.9rem;
+          padding: 0.4rem 0.8rem;
+        }
+      }
+    </style>
 </body>
 </html>
